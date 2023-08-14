@@ -1,0 +1,11 @@
+{
+    "extends": "eslint:recommended",
+    "rules": {
+      "semi": "error",
+      "quotes": ["error", "single"],
+      "indent": ["error", 2], 
+      "comma-dangle": ["error", "always-multiline"], 
+      "no-unused-vars": "warn"
+    }
+  }
+  
