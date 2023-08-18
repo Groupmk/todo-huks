@@ -13,8 +13,8 @@ const TaskList = function(props) {
     updateInterval,
     minutes,
     seconds,
-    onTriggerBtn,
-    pauseTimer,
+    onToggleBtn,
+    onPauseTimer,
   } = props;
   const [editing, setEditing] = useState(false);
   const [inputValue, setInputValue] = useState(label);
@@ -96,9 +96,9 @@ const TaskList = function(props) {
           <label>
             <span className="description">{label}</span>
             <span className="timer">
-              <button className='icon icon-play' onClick={onTriggerBtn}></button>
+              <button className='icon icon-play' onClick={onToggleBtn}></button>
                 
-              <button className='icon icon-pause' onClick={pauseTimer}></button>
+              <button className='icon icon-pause' onClick={onPauseTimer}></button>
               {String(minutes).padStart(2, '0')}:{String(seconds).padStart(2, '0')}
             </span>
             <span className="created">{formatedDistance}</span>

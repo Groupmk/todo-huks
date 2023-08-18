@@ -7,8 +7,8 @@ const Task = function({
   onToggleDone,
   onToggleDestroy,
   onToggleNewTask,
-  onTriggerBtn,
-  pauseTimer,
+  onToggleBtn,
+  onPauseTimer,
 }) {
   const elements = tasks.map((item) => {
     const { id, ...props } = item;
@@ -21,9 +21,8 @@ const Task = function({
         onToggleNewTask={(text) => onToggleNewTask(id, text)}
         minutes={item.minutes}
         seconds={item.seconds}
-        onTriggerBtn={() => onTriggerBtn(id)}
-        pauseTimer={() => pauseTimer()}
-        toggleTimer
+        onToggleBtn={() => onToggleBtn(id)}
+        onPauseTimer={() => onPauseTimer(id)}
       />
     );
   });
